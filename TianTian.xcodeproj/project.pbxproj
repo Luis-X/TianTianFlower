@@ -21,6 +21,7 @@
 		184EC0221DE2C39500B30B1D /* TianTianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EC0211DE2C39500B30B1D /* TianTianTests.swift */; };
 		184EC02D1DE2C39500B30B1D /* TianTianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EC02C1DE2C39500B30B1D /* TianTianUITests.swift */; };
 		4961E2A0043C02ECFEBE892D /* Pods_TianTian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07D70C0568C162A36C0D548 /* Pods_TianTian.framework */; };
+		D141C5631E49D313006C2CF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D141C5621E49D313006C2CF4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BB9CA6DE5CF14E2922F1A2AF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA3811E7F4D6CBC185DB1C6 /* Pods-TianTian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianTian.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianTian/Pods-TianTian.release.xcconfig"; sourceTree = "<group>"; };
 		D07D70C0568C162A36C0D548 /* Pods_TianTian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianTian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D141C5621E49D313006C2CF4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAD70E32084E540C71CE200B /* Pods-TianTian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianTian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianTian/Pods-TianTian.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +185,7 @@
 		184EC00B1DE2C39500B30B1D /* TianTian */ = {
 			isa = PBXGroup;
 			children = (
+				D141C55E1E49D2D6006C2CF4 /* Login */,
 				182C9E041DED797700C2D111 /* Resource */,
 				182C9E011DED767D00C2D111 /* BaseClass */,
 				1843A4821DE2E34C00FD613B /* Util */,
@@ -231,6 +234,38 @@
 				BDA3811E7F4D6CBC185DB1C6 /* Pods-TianTian.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D141C55E1E49D2D6006C2CF4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D141C55F1E49D2D6006C2CF4 /* Model */,
+				D141C5601E49D2D6006C2CF4 /* View */,
+				D141C5611E49D2D6006C2CF4 /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D141C55F1E49D2D6006C2CF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D141C5601E49D2D6006C2CF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D141C5611E49D2D6006C2CF4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D141C5621E49D313006C2CF4 /* LoginViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D141C5631E49D313006C2CF4 /* LoginViewController.swift in Sources */,
 				1843A4861DE2F81900FD613B /* AppHeader.swift in Sources */,
 				184EC00F1DE2C39500B30B1D /* ViewController.swift in Sources */,
 				1843A48D1DE309C100FD613B /* Constant.swift in Sources */,

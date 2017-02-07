@@ -61,8 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                      "title" : "首页",
                                "normalImage" : "ui_normal@2x.png",
                              "selectedImage" : "ui_selected@2x.png"],
-                           ["viewController" : "HomeViewController",
-                            "title" : "我的",
+                           ["viewController" : "LoginViewController",
+                            "title" : "登录",
                             "normalImage" : "ui_normal@2x.png",
                             "selectedImage" : "ui_selected@2x.png"]]
         rootTabBarController.viewControllers =  self.createNavigationController(vcNameArray)

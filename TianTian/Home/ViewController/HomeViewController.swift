@@ -38,31 +38,67 @@ class HomeViewController: BaseViewController {
     */
 
     
-    /// 初始化数据
+    /*
+     *  初始化数据
+     */
     func initailData(){
         viewSize = CGSize(width: 100, height: 100)
     }
     
-    /// 创建视图
+    /*
+     *  创建视图
+     */
      func createMainViews(){
         
-        let mainView = ASDisplayNode()
-        mainView.backgroundColor = UIColor(gradientStyle: .leftToRight, withFrame: CGRect(x: 0, y: 0, width: viewSize.width, height: viewSize.height), andColors: [FlatRed(), FlatBlue()])
-        self.view.addSubnode(mainView)
-        mainView.view.snp.makeConstraints { (make) -> Void in
-            make.width.height.equalTo(100)
-            make.center.equalTo(self.view)
+        //背景
+        let mainBackgroundImageView = UIImageView()
+        self.view.addSubview(mainBackgroundImageView)
+        mainBackgroundImageView.backgroundColor = FlatCoffee()
+        mainBackgroundImageView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
         }
         
-        let view1 = ASDisplayNode()
-        self.view.addSubnode(view1)
-        view1.backgroundColor = UIColor.blue;
-        view1.view.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize(width: 50, height: 50))
-            make.center.equalTo(self.view)
+        //日期
+        let mainNowDayLabel = UILabel()
+        self.view.addSubview(mainNowDayLabel)
+        //mainNowDayLabel.backgroundColor = FlatOrange()
+        mainNowDayLabel.text = "06"
+        mainNowDayLabel.font = UIFont.systemFont(ofSize: 45)
+        mainNowDayLabel.textColor = FlatBlack()
+        mainNowDayLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(self.view).offset(10)
+            make.top.equalTo(self.view).offset(64 + 10)
         }
- 
+        
+        //月份
+        let mainNowMonthLabel = UILabel()
+        self.view.addSubview(mainNowMonthLabel)
+        //mainNowMonthLabel.backgroundColor = FlatRed()
+        mainNowMonthLabel.text = "2月"
+        mainNowMonthLabel.font = UIFont.systemFont(ofSize: 15)
+        mainNowDayLabel.textColor = FlatBlack()
+        mainNowMonthLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(mainNowDayLabel.snp.right).offset(2)
+            make.bottom.equalTo(mainNowDayLabel).offset(-8)
+        }
+
+        //公告
+        let mainMessageLabel = UILabel()
+        self.view.addSubview(mainMessageLabel)
+        //mainMessageLabel.backgroundColor = FlatOrange()
+        mainMessageLabel.text = "每一天都是美好的一天"
+        mainMessageLabel.font = UIFont.systemFont(ofSize: 15)
+        mainMessageLabel.textColor = FlatBlack()
+        mainMessageLabel.numberOfLines = 0
+        mainMessageLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(mainNowDayLabel)
+            make.top.equalTo(mainNowDayLabel.snp.bottom)
+            make.right.lessThanOrEqualTo(self.view).offset(-10)
+        }
+        
         
     }
+    
+    
     
 }
