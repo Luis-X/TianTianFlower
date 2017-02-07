@@ -1,0 +1,6 @@
+framework module Pods_TianTian {
+  umbrella header "Pods-TianTian-umbrella.h"
+
+  export *
+  module * { export * }
+}
