@@ -19,6 +19,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DateToolsSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DeviceKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Hero.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PINCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -48,11 +68,6 @@
 			<true/>
 		</dict>
 		<key>1879ED5E4D07889BD22CE9BC52F55342</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>68416CB2362DD4094358DBEF543CD307</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +87,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A86D72B051DC97C3AC702392CBD42ABE</key>
+		<key>ABBF9E4212C3AF068FDBF8C9F9794CC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B74671AC4AD442223B677430EE6BBBF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB2E3280993C5F782729D88D636E48CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CBC08580AE5A802626154E0BCABF642B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E89CFD99B895BCC6E8EDC2F95A03500C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9048306E9EC419FB5DD101459FF3A55</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -18,11 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
     
-        self.window?.rootViewController = ViewController()
-        
-        self.initViewControllersAndTabBarItems()
+        self.window?.rootViewController = RootTabBarController()
         //设置主题
-        Chameleon.setGlobalThemeUsingPrimaryColor(FlatRed(), withSecondaryColor: FlatRed(), andContentStyle: .light)
+        Chameleon.setGlobalThemeUsingPrimaryColor(RandomFlatColor(), withSecondaryColor: RandomFlatColor(), andContentStyle: .light)
 
         
         return true
@@ -51,51 +49,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-    // MARK: 初始化标签栏
-    func initViewControllersAndTabBarItems() -> Void {
-        
-        let rootTabBarController = UITabBarController()
-        self.window?.rootViewController = rootTabBarController
-        
-        let vcNameArray = [["viewController" : "HomeViewController",
-                                     "title" : "首页",
-                               "normalImage" : "ui_normal@2x.png",
-                             "selectedImage" : "ui_selected@2x.png"],
-                           ["viewController" : "LoginViewController",
-                            "title" : "登录",
-                            "normalImage" : "ui_normal@2x.png",
-                            "selectedImage" : "ui_selected@2x.png"]]
-        rootTabBarController.viewControllers =  self.createNavigationController(vcNameArray)
-        
-    }
-    
-    //创建视图控制器
-    func createNavigationController(_ arrays: Array<Dictionary<String, String>>!) -> Array<UIViewController> {
-
-        /*  Swift 中使用   NSClassFromString   注意点:
-         *  使用时会遇到的错误代码:
-         *      fatal error: unexpectedly found nil while unwrapping an Optinal value
-         *  原因:
-         *      swift在用字符串转为类型的时候,如果类型是自定义的,需要在类型字符串前面加上项目名称
-         */
-        
-        var resultArray = Array<UIViewController>()
-        for itemDic in arrays {
-            
-            let image = itemDic["normalImage"]
-            let selectedImage = itemDic["selectedImage"]
-            let title = itemDic["title"]
-            
-            let className = "TianTian." + itemDic["viewController"]!
-            let viewControllerType = NSClassFromString(className) as! BaseViewController.Type
-            let viewController = viewControllerType.init()
-            let navigationController = UINavigationController(rootViewController:viewController)
-            let tabBarItem = UITabBarItem(title:title, image:UIImage(named:image!), selectedImage:UIImage(named:selectedImage!))
-            navigationController.tabBarItem = tabBarItem
-            resultArray.append(navigationController)
-            
-        }
-        return resultArray
-    }
 }
 

@@ -22,6 +22,12 @@
 		184EC02D1DE2C39500B30B1D /* TianTianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EC02C1DE2C39500B30B1D /* TianTianUITests.swift */; };
 		4961E2A0043C02ECFEBE892D /* Pods_TianTian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07D70C0568C162A36C0D548 /* Pods_TianTian.framework */; };
 		D141C5631E49D313006C2CF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D141C5621E49D313006C2CF4 /* LoginViewController.swift */; };
+		D141C5651E4AC098006C2CF4 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D141C5641E4AC098006C2CF4 /* RecommendCollectionViewCell.swift */; };
+		D141C5671E4ACC1F006C2CF4 /* background-default-iphone6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D141C5661E4ACC1F006C2CF4 /* background-default-iphone6@2x.png */; };
+		D141C5691E4ACC93006C2CF4 /* picture.png in Resources */ = {isa = PBXBuildFile; fileRef = D141C5681E4ACC93006C2CF4 /* picture.png */; };
+		D141C56F1E4AE824006C2CF4 /* GoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D141C56E1E4AE824006C2CF4 /* GoodsDetailViewController.swift */; };
+		D141C5751E4AEA22006C2CF4 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D141C5741E4AEA22006C2CF4 /* RootTabBarController.swift */; };
+		D141C5791E4AFA41006C2CF4 /* QuicklyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D141C5781E4AFA41006C2CF4 /* QuicklyUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,12 @@
 		BDA3811E7F4D6CBC185DB1C6 /* Pods-TianTian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianTian.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianTian/Pods-TianTian.release.xcconfig"; sourceTree = "<group>"; };
 		D07D70C0568C162A36C0D548 /* Pods_TianTian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianTian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D141C5621E49D313006C2CF4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D141C5641E4AC098006C2CF4 /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
+		D141C5661E4ACC1F006C2CF4 /* background-default-iphone6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-default-iphone6@2x.png"; sourceTree = "<group>"; };
+		D141C5681E4ACC93006C2CF4 /* picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture.png; sourceTree = "<group>"; };
+		D141C56E1E4AE824006C2CF4 /* GoodsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailViewController.swift; sourceTree = "<group>"; };
+		D141C5741E4AEA22006C2CF4 /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		D141C5781E4AFA41006C2CF4 /* QuicklyUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklyUI.swift; sourceTree = "<group>"; };
 		FAD70E32084E540C71CE200B /* Pods-TianTian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianTian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianTian/Pods-TianTian.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +125,8 @@
 		182C9E051DED798A00C2D111 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D141C5681E4ACC93006C2CF4 /* picture.png */,
+				D141C5661E4ACC1F006C2CF4 /* background-default-iphone6@2x.png */,
 				182C9E061DED79DA00C2D111 /* ui_normal@2x.png */,
 				182C9E071DED79DA00C2D111 /* ui_selected@2x.png */,
 			);
@@ -139,6 +153,7 @@
 		1843A47A1DE2C93F00FD613B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D141C5641E4AC098006C2CF4 /* RecommendCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +171,7 @@
 			children = (
 				1843A4851DE2F81900FD613B /* AppHeader.swift */,
 				1843A48C1DE309C100FD613B /* Constant.swift */,
+				D141C5781E4AFA41006C2CF4 /* QuicklyUI.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -185,6 +201,8 @@
 		184EC00B1DE2C39500B30B1D /* TianTian */ = {
 			isa = PBXGroup;
 			children = (
+				D141C5701E4AE9C7006C2CF4 /* RootTabBar */,
+				D141C56A1E4AE80C006C2CF4 /* Product */,
 				D141C55E1E49D2D6006C2CF4 /* Login */,
 				182C9E041DED797700C2D111 /* Resource */,
 				182C9E011DED767D00C2D111 /* BaseClass */,
@@ -264,6 +282,54 @@
 			isa = PBXGroup;
 			children = (
 				D141C5621E49D313006C2CF4 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D141C56A1E4AE80C006C2CF4 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				D141C56B1E4AE80C006C2CF4 /* Model */,
+				D141C56C1E4AE80C006C2CF4 /* View */,
+				D141C56D1E4AE80C006C2CF4 /* ViewController */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		D141C56B1E4AE80C006C2CF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D141C56C1E4AE80C006C2CF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D141C56D1E4AE80C006C2CF4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D141C56E1E4AE824006C2CF4 /* GoodsDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D141C5701E4AE9C7006C2CF4 /* RootTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D141C5711E4AE9C7006C2CF4 /* ViewController */,
+			);
+			path = RootTabBar;
+			sourceTree = "<group>";
+		};
+		D141C5711E4AE9C7006C2CF4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D141C5741E4AEA22006C2CF4 /* RootTabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -382,9 +448,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				184EC0171DE2C39500B30B1D /* LaunchScreen.storyboard in Resources */,
+				D141C5691E4ACC93006C2CF4 /* picture.png in Resources */,
 				184EC0141DE2C39500B30B1D /* Assets.xcassets in Resources */,
 				184EC0121DE2C39500B30B1D /* Main.storyboard in Resources */,
 				182C9E081DED79DA00C2D111 /* ui_normal@2x.png in Resources */,
+				D141C5671E4ACC1F006C2CF4 /* background-default-iphone6@2x.png in Resources */,
 				182C9E091DED79DA00C2D111 /* ui_selected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,12 +527,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D141C5631E49D313006C2CF4 /* LoginViewController.swift in Sources */,
+				D141C5751E4AEA22006C2CF4 /* RootTabBarController.swift in Sources */,
 				1843A4861DE2F81900FD613B /* AppHeader.swift in Sources */,
 				184EC00F1DE2C39500B30B1D /* ViewController.swift in Sources */,
 				1843A48D1DE309C100FD613B /* Constant.swift in Sources */,
+				D141C5791E4AFA41006C2CF4 /* QuicklyUI.swift in Sources */,
 				184EC00D1DE2C39500B30B1D /* AppDelegate.swift in Sources */,
+				D141C56F1E4AE824006C2CF4 /* GoodsDetailViewController.swift in Sources */,
 				1843A47D1DE2C95600FD613B /* HomeViewController.swift in Sources */,
 				182C9E031DED769800C2D111 /* BaseViewController.swift in Sources */,
+				D141C5651E4AC098006C2CF4 /* RecommendCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
