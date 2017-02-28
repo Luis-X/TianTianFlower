@@ -41,14 +41,11 @@ class RootTabBarController: UITabBarController {
     // MARK: 初始化标签栏
     func initViewControllersAndTabBarItems() {
         
-        let vcNameArray = [["viewController" : "HomeViewController",
-                            "title" : "首页",
-                            "normalImage" : "ui_normal@2x.png",
-                            "selectedImage" : "ui_selected@2x.png"],
-                           ["viewController" : "LoginViewController",
-                            "title" : "登录",
-                            "normalImage" : "ui_normal@2x.png",
-                            "selectedImage" : "ui_selected@2x.png"]]
+        let vcNameArray = [
+            ["viewController" : "HomeViewController", "title" : "首页", "normalImage" : "ui_normal@2x.png", "selectedImage" : "ui_selected@2x.png"],
+            ["viewController" : "LoginViewController", "title" : "登录", "normalImage" : "ui_normal@2x.png", "selectedImage" : "ui_selected@2x.png"],
+            ["viewController" : "UserViewController", "title" : "我的", "normalImage" : "ui_normal@2x.png", "selectedImage" : "ui_selected@2x.png"]
+        ]
         self.viewControllers =  self.createNavigationController(vcNameArray)
         
     }

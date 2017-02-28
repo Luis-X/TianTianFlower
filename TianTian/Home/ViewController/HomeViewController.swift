@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework       //变色龙
+import SwiftyJSON
 
 class HomeViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -23,6 +24,7 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         self.initailData()
         self.createMainViews()
         self.navigationBarLucency(open: true)
+        self.networkGetHomeData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -142,5 +144,18 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         let viewController = GoodsDetailViewController()
         QuicklyUI.navigationControllerPushViewController(self.navigationController, viewController, hidden: true, animated: true)
         
+    }
+    
+//MARK: -网络请求
+    
+    func networkGetHomeData() {
+
+        NetworkManager.GET(url: HostAddressManager().requestAPI(api: "login"), parameters: ["username": 456, "password": 123], success: { (success) in
+            print("成功:", JSON(success))
+        }) { (failure) in
+            print("失败", failure)
+            
+        }
+
     }
 }

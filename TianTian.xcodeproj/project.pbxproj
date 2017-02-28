@@ -28,6 +28,9 @@
 		D191F17E1E64166800BC465F /* AppHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F17B1E64166800BC465F /* AppHeader.swift */; };
 		D191F17F1E64166800BC465F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F17C1E64166800BC465F /* Constant.swift */; };
 		D191F1801E64166800BC465F /* QuicklyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F17D1E64166800BC465F /* QuicklyUI.swift */; };
+		D1E1C9B51E650FD000AD5064 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1C9B41E650FD000AD5064 /* UserViewController.swift */; };
+		D1E1C9D81E652B2200AD5064 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1C9D71E652B2200AD5064 /* NetworkManager.swift */; };
+		D1E1C9DE1E65784600AD5064 /* HostAddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1C9DD1E65784600AD5064 /* HostAddressManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		D191F17B1E64166800BC465F /* AppHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHeader.swift; sourceTree = "<group>"; };
 		D191F17C1E64166800BC465F /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D191F17D1E64166800BC465F /* QuicklyUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklyUI.swift; sourceTree = "<group>"; };
+		D1E1C9B41E650FD000AD5064 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		D1E1C9D71E652B2200AD5064 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D1E1C9DD1E65784600AD5064 /* HostAddressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostAddressManager.swift; sourceTree = "<group>"; };
 		FAD70E32084E540C71CE200B /* Pods-TianTian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianTian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TianTian/Pods-TianTian.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +137,7 @@
 		184EC00B1DE2C39500B30B1D /* TianTian */ = {
 			isa = PBXGroup;
 			children = (
+				D1E1C9B01E650FB100AD5064 /* User(我的) */,
 				D191F1431E6412AF00BC465F /* Login(登录) */,
 				D191F13D1E6412AF00BC465F /* Home(首页) */,
 				D191F1501E6412AF00BC465F /* Product(产品) */,
@@ -225,6 +232,8 @@
 		D191F13B1E6412AF00BC465F /* Network(网络) */ = {
 			isa = PBXGroup;
 			children = (
+				D1E1C9D71E652B2200AD5064 /* NetworkManager.swift */,
+				D1E1C9DD1E65784600AD5064 /* HostAddressManager.swift */,
 			);
 			name = "Network(网络)";
 			path = Network;
@@ -457,6 +466,39 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		D1E1C9B01E650FB100AD5064 /* User(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				D1E1C9B11E650FB100AD5064 /* Model */,
+				D1E1C9B21E650FB100AD5064 /* View */,
+				D1E1C9B31E650FB100AD5064 /* ViewController */,
+			);
+			name = "User(我的)";
+			path = User;
+			sourceTree = "<group>";
+		};
+		D1E1C9B11E650FB100AD5064 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1E1C9B21E650FB100AD5064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1E1C9B31E650FB100AD5064 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D1E1C9B41E650FD000AD5064 /* UserViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -650,7 +692,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D191F16A1E6412AF00BC465F /* GoodsDetailViewController.swift in Sources */,
+				D1E1C9B51E650FD000AD5064 /* UserViewController.swift in Sources */,
 				D191F17E1E64166800BC465F /* AppHeader.swift in Sources */,
+				D1E1C9D81E652B2200AD5064 /* NetworkManager.swift in Sources */,
+				D1E1C9DE1E65784600AD5064 /* HostAddressManager.swift in Sources */,
 				D191F1771E6414F700BC465F /* RootTabBarController.swift in Sources */,
 				D191F1681E6412AF00BC465F /* LoginViewController.swift in Sources */,
 				D191F1671E6412AF00BC465F /* HomeViewController.swift in Sources */,

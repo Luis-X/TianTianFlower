@@ -11,6 +11,7 @@ pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chamel
 pod 'SwiftyJSON', '~> 3.1.4'	# JSON解析之王
 pod 'Hero', '~> 0.1.7'		# 过度动画
 pod 'DeviceKit', '~> 1.0'	# 设备信息
+pod 'Realm', '~> 2.4.2'         # 数据库
 end
 
 

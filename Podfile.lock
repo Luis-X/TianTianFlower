@@ -20,6 +20,9 @@ PODS:
     - PINCache (>= 3.0.0-beta)
   - PINRemoteImage/iOS (3.0.0-beta.3):
     - PINRemoteImage/Core
+  - Realm (2.4.2):
+    - Realm/Headers (= 2.4.2)
+  - Realm/Headers (2.4.2)
   - SnapKit (3.0.2)
   - SwiftyJSON (3.1.4)
 
@@ -30,6 +33,7 @@ DEPENDENCIES:
   - DateToolsSwift (~> 2.0.0)
   - DeviceKit (~> 1.0)
   - Hero (~> 0.1.7)
+  - Realm (~> 2.4.2)
   - SnapKit
   - SwiftyJSON (~> 3.1.4)
 
@@ -51,9 +55,10 @@ SPEC CHECKSUMS:
   Hero: 423c0c60ae79144ed2e26f5f7dd44e7cb101ee94
   PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
   PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
+  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 94cef7601793d39829b34cf514e9454201a6ea3a
+PODFILE CHECKSUM: d3e0059c239a6e564a97932084fd798f93330f85
 
 COCOAPODS: 1.2.0
