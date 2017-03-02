@@ -27,6 +27,23 @@ class QuicklyUI: NSObject {
     
     //MARK: -基础控件
     /**
+     UIView
+     
+     @param addView   添加View
+     @param textColor 文本颜色
+     @param font      字体
+     */
+    class func viewAddView(addView:UIView, backgroundColor:UIColor) -> UIView {
+        
+        let view = UIView()
+        view.backgroundColor = backgroundColor
+        addView.addSubview(view)
+        return view
+        
+    }
+    
+    //MARK: -基础控件
+    /**
      UILabel
      
      @param addView   添加View
@@ -96,7 +113,7 @@ class QuicklyUI: NSObject {
     class func textfieldAddView(addView:UIView, placeholder:String, textColor:UIColor, font:UIFont) -> UITextField {
         
         let textfiled = UITextField()
-        textfiled.backgroundColor = UIColor.orange
+        //textfiled.backgroundColor = UIColor.orange
         textfiled.placeholder = placeholder
         textfiled.textColor = textColor
         textfiled.font = font

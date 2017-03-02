@@ -20,13 +20,14 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
-        self.initailData()
+        self.initialData()
         self.createMainViews()
         self.navigationBarLucency(open: true)
-        self.networkGetHomeData()
+        //self.networkGetHomeData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,7 +54,7 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
     /*
      *  初始化数据
      */
-    func initailData(){
+    func initialData(){
         viewSize = CGSize(width: 100, height: 100)
     }
     
@@ -141,7 +142,7 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
 //MARK: -UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        let viewController = GoodsDetailViewController()
+        let viewController = LoginViewController()
         QuicklyUI.navigationControllerPushViewController(self.navigationController, viewController, hidden: true, animated: true)
         
     }
