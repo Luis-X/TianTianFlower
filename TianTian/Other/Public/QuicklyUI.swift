@@ -10,14 +10,14 @@ import UIKit
 
 class QuicklyUI: NSObject {
     //MARK: -系统
-    /**
-     系统push
-     
-     @param navigationController
-     @param viewController
-     @param hidden               是否隐藏Tabbar
-     @param animated             是否动画
-     */
+    
+    /// 系统push
+    ///
+    /// - Parameters:
+    ///   - navigationController:
+    ///   - viewController:
+    ///   - hidden:                 是否隐藏Tabbar
+    ///   - animated:               是否动画
     class func navigationControllerPushViewController(_ navigationController:UINavigationController!, _ viewController:UIViewController!, hidden:Bool, animated:Bool){
         
         viewController.hidesBottomBarWhenPushed = hidden
@@ -26,13 +26,12 @@ class QuicklyUI: NSObject {
     }
     
     //MARK: -基础控件
-    /**
-     UIView
-     
-     @param addView   添加View
-     @param textColor 文本颜色
-     @param font      字体
-     */
+    
+    /// UIView
+    ///
+    /// - Parameters:
+    ///   - addView:                添加View
+    ///   - backgroundColor:        背景颜色
     class func viewAddView(addView:UIView, backgroundColor:UIColor) -> UIView {
         
         let view = UIView()
@@ -42,14 +41,12 @@ class QuicklyUI: NSObject {
         
     }
     
-    //MARK: -基础控件
-    /**
-     UILabel
-     
-     @param addView   添加View
-     @param textColor 文本颜色
-     @param font      字体
-     */
+    /// UILabel
+    ///
+    /// - Parameters:
+    ///   - addView:                添加View
+    ///   - textColor:              文本颜色
+    ///   - font:                   字体
     class func labelAddView(addView:UIView, textColor:UIColor, font:UIFont) -> UILabel {
         
         let label = UILabel()
@@ -61,16 +58,15 @@ class QuicklyUI: NSObject {
         
     }
     
-    /**
-     UIButton
-     
-     @param addView         添加View
-     @param title           标题
-     @param titleColor      标题颜色
-     @param font            字体
-     @param cornerRadius    圆角
-     @param backgroundColor 背景颜色
-     */
+    /// UIButton
+    ///
+    /// - Parameters:
+    ///   - addView:                添加View
+    ///   - title:                  标题
+    ///   - titleColor:             标题颜色
+    ///   - font:                   字体
+    ///   - cornerRadius:           圆角
+    ///   - backgroundColor:        背景颜色
     class func buttonAddView(addView:UIView, title:String, titleColor:UIColor, font:UIFont, cornerRadius:CGFloat, backgroundColor:UIColor) -> UIButton {
         
         let button = UIButton(type: .custom)
@@ -84,13 +80,12 @@ class QuicklyUI: NSObject {
         
     }
     
-    /**
-     UIImageView
-     
-     @param addView       添加View
-     @param clipsToBounds 边界裁剪
-     @param contentMode   显示方式
-     */
+    /// UIImageView
+    ///
+    /// - Parameters:
+    ///   - addView:                添加View
+    ///   - clipsToBounds:          边界裁剪
+    ///   - contentMode:            显示方式
     class func imageViewAddView(addView:UIView, clipsToBounds:Bool, contentMode:UIViewContentMode) -> UIImageView {
         
         let imageView = UIImageView()
@@ -102,14 +97,13 @@ class QuicklyUI: NSObject {
         
     }
 
-    /**
-     UITextField
-     
-     @param addView       添加View
-     @param placeholder   占位符
-     @param textColor     文本颜色
-     @param font          字体
-     */
+    /// UITextField
+    ///
+    /// - Parameters:
+    ///   - addView:                添加View
+    ///   - placeholder:            占位符
+    ///   - textColor:              文本颜色
+    ///   - font:                   字体
     class func textfieldAddView(addView:UIView, placeholder:String, textColor:UIColor, font:UIFont) -> UITextField {
         
         let textfiled = UITextField()
@@ -121,6 +115,26 @@ class QuicklyUI: NSObject {
         textfiled.autocorrectionType = .no                  //关闭自动更正
         addView.addSubview(textfiled)
         return textfiled
+        
+    }
+    
+    /// UITableView
+    ///
+    /// - Parameters:
+    ///   - addView:                添加View
+    ///   - delegate:               代理
+    ///   - dataSource:             代理
+    ///   - style:                  列表样式
+    ///   - separatorStyle:         分割样式
+    class func tableviewAddView(addView:UIView, delegate:UITableViewDelegate, dataSource:UITableViewDataSource, style:UITableViewStyle, separatorStyle:UITableViewCellSeparatorStyle) -> UITableView {
+        
+        let tableview = UITableView(frame: CGRect.zero, style: style)
+        //tableview.backgroundColor = UIColor.orange
+        tableview.separatorStyle = separatorStyle
+        tableview.delegate = delegate
+        tableview.dataSource = dataSource
+        addView.addSubview(tableview)
+        return tableview
         
     }
 }

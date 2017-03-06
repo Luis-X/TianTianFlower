@@ -15,6 +15,8 @@
 		184EC0221DE2C39500B30B1D /* TianTianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EC0211DE2C39500B30B1D /* TianTianTests.swift */; };
 		184EC02D1DE2C39500B30B1D /* TianTianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EC02C1DE2C39500B30B1D /* TianTianUITests.swift */; };
 		4961E2A0043C02ECFEBE892D /* Pods_TianTian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07D70C0568C162A36C0D548 /* Pods_TianTian.framework */; };
+		D108B2761E696B3A00A806E7 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D108B2751E696B3A00A806E7 /* UserTableViewCell.swift */; };
+		D12002A11E682C5900E9E24F /* backgroud.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D12002A01E682C5900E9E24F /* backgroud.jpeg */; };
 		D191F1661E6412AF00BC465F /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F1401E6412AF00BC465F /* RecommendCollectionViewCell.swift */; };
 		D191F1671E6412AF00BC465F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F1421E6412AF00BC465F /* HomeViewController.swift */; };
 		D191F1681E6412AF00BC465F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F1471E6412AF00BC465F /* LoginViewController.swift */; };
@@ -67,6 +69,8 @@
 		BB9CA6DE5CF14E2922F1A2AF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA3811E7F4D6CBC185DB1C6 /* Pods-TianTian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianTian.release.xcconfig"; path = "Pods/Target Support Files/Pods-TianTian/Pods-TianTian.release.xcconfig"; sourceTree = "<group>"; };
 		D07D70C0568C162A36C0D548 /* Pods_TianTian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianTian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D108B2751E696B3A00A806E7 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		D12002A01E682C5900E9E24F /* backgroud.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroud.jpeg; sourceTree = "<group>"; };
 		D191F1401E6412AF00BC465F /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		D191F1421E6412AF00BC465F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D191F1471E6412AF00BC465F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -426,6 +430,7 @@
 		D191F1571E6412AF00BC465F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D12002A01E682C5900E9E24F /* backgroud.jpeg */,
 				D191F1581E6412AF00BC465F /* background-default-iphone6@2x.png */,
 				D191F1591E6412AF00BC465F /* picture.png */,
 				D191F15A1E6412AF00BC465F /* ui_normal@2x.png */,
@@ -487,6 +492,7 @@
 		D1E1C9B21E650FB100AD5064 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D108B2751E696B3A00A806E7 /* UserTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -616,6 +622,7 @@
 				184EC0141DE2C39500B30B1D /* Assets.xcassets in Resources */,
 				D191F16C1E6412AF00BC465F /* picture.png in Resources */,
 				D191F16D1E6412AF00BC465F /* ui_normal@2x.png in Resources */,
+				D12002A11E682C5900E9E24F /* backgroud.jpeg in Resources */,
 				184EC0121DE2C39500B30B1D /* Main.storyboard in Resources */,
 				D191F16B1E6412AF00BC465F /* background-default-iphone6@2x.png in Resources */,
 				D191F16E1E6412AF00BC465F /* ui_selected@2x.png in Resources */,
@@ -695,6 +702,7 @@
 				D1E1C9B51E650FD000AD5064 /* UserViewController.swift in Sources */,
 				D191F17E1E64166800BC465F /* AppHeader.swift in Sources */,
 				D1E1C9D81E652B2200AD5064 /* NetworkManager.swift in Sources */,
+				D108B2761E696B3A00A806E7 /* UserTableViewCell.swift in Sources */,
 				D1E1C9DE1E65784600AD5064 /* HostAddressManager.swift in Sources */,
 				D191F1771E6414F700BC465F /* RootTabBarController.swift in Sources */,
 				D191F1681E6412AF00BC465F /* LoginViewController.swift in Sources */,

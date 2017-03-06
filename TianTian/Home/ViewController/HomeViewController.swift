@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework       //变色龙
 import SwiftyJSON
 
 class HomeViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -20,24 +19,27 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
-        self.initialData()
+        
+    }
+    
+    override func baseDidLoadAllDatas() {
+        viewSize = CGSize(width: 100, height: 100)
+    }
+    
+    override func baseDidLoadAllViews() {
         self.createMainViews()
         self.navigationBarLucency(open: true)
-        //self.networkGetHomeData()
+    }
+
+    override func baseDidLoadAllNetworks() {
+        self.networkGetHomeData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func navigationBarLucency(open: Bool){
-        self.title = "Swift"
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = open
     }
 
     /*
@@ -49,29 +51,29 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         // Pass the selected object to the new view controller.
     }
     */
-
     
-    /*
-     *  初始化数据
-     */
-    func initialData(){
-        viewSize = CGSize(width: 100, height: 100)
+    /// 导航栏透明
+    ///
+    /// - Parameter open: 是否透明
+    func navigationBarLucency(open: Bool){
+        self.title = "Swift"
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = open
     }
     
-    /*
-     *  创建视图
-     */
+     /// 初始化视图
      func createMainViews(){
         
         //背景
-        mainBackgroundImageView = QuicklyUI.imageViewAddView(addView: self.view, clipsToBounds: true, contentMode: .scaleToFill)
-        mainBackgroundImageView.image = UIImage(named: "background-default-iphone6@2x.png")
+        mainBackgroundImageView = QuicklyUI.imageViewAddView(addView: self.view, clipsToBounds: true, contentMode: .scaleAspectFit)
+        mainBackgroundImageView.image = UIImage(named: "backgroud.jpeg")
         mainBackgroundImageView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
         
         //日期
-        mainDayLabel = QuicklyUI.labelAddView(addView: self.view, textColor: FlatWhite(), font: .systemFont(ofSize: 45))
+        mainDayLabel = QuicklyUI.labelAddView(addView: self.view, textColor: THEME_color_text_black, font: .systemFont(ofSize: 45))
         mainDayLabel.text = Date().format(with: "dd")
         mainDayLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.view).offset(10)
@@ -79,7 +81,7 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         }
         
         //月份
-        mainMonthLabel = QuicklyUI.labelAddView(addView: self.view, textColor: FlatWhite(), font: .systemFont(ofSize: 15))
+        mainMonthLabel = QuicklyUI.labelAddView(addView: self.view, textColor: THEME_color_text_black, font: .systemFont(ofSize: 15))
         mainMonthLabel.text = String(Date().month) + "月"
         mainMonthLabel.snp.makeConstraints { (make) in
             make.left.equalTo(mainDayLabel.snp.right).offset(2)
@@ -87,7 +89,7 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         }
 
         //公告
-        mainMessageLabel = QuicklyUI.labelAddView(addView: self.view, textColor: FlatWhite(), font: .systemFont(ofSize: 15))
+        mainMessageLabel = QuicklyUI.labelAddView(addView: self.view, textColor: THEME_color_text_black, font: .systemFont(ofSize: 15))
         mainMessageLabel.text = "每一天都是美好的一天"
         mainMessageLabel.numberOfLines = 0
         mainMessageLabel.snp.makeConstraints { (make) in
@@ -99,7 +101,8 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         self.createMainRecommendCollectionView()
     }
     
-    //推荐模块
+    
+    /// 推荐视图
     func createMainRecommendCollectionView() {
         
         let item_width = CGFloat(SCREEN_WIDTH / 2.8);
@@ -131,7 +134,7 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
 //MARK: -UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! RecommendCollectionViewCell
-        cell.priceLabel.text = String(indexPath.row)
+        cell.priceLabel.text = "¥" + String(indexPath.row) + "00"
         return cell
     }
 

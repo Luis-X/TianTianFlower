@@ -35,7 +35,7 @@ class RecommendCollectionViewCell: UICollectionViewCell {
             make.edges.equalTo(self.contentView)
         }
         
-        priceLabel = QuicklyUI.labelAddView(addView: self.contentView, textColor: .orange, font: .systemFont(ofSize: 15))
+        priceLabel = QuicklyUI.labelAddView(addView: self.contentView, textColor: THEME_color_text_red, font: .systemFont(ofSize: 15))
         priceLabel.snp.makeConstraints { (make) in
             make.bottom.equalTo(self.contentView)
             make.left.greaterThanOrEqualTo(self.contentView).offset(10)

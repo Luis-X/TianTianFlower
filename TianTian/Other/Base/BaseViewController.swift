@@ -12,8 +12,13 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white;
+        self.view.backgroundColor = THEME_color_background_normal;
+        
         // Do any additional setup after loading the view.
+        //self.baseDidLoadAllNetworks()
+        self.baseDidLoadAllDatas()
+        self.baseDidLoadAllViews()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +26,7 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +36,19 @@ class BaseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    /// 初始化数据
+    func baseDidLoadAllDatas() {
+        
+    }
+    
+    /// 初始化视图
+    func baseDidLoadAllViews() {
+        
+    }
+    
+    /// 初始化网络请求
+    func baseDidLoadAllNetworks() {
+        
+    }
 }

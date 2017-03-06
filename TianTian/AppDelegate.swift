@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         self.window?.rootViewController = RootTabBarController()
         //设置主题
-        Chameleon.setGlobalThemeUsingPrimaryColor(RandomFlatColor(), withSecondaryColor: RandomFlatColor(), andContentStyle: .light)
+        Chameleon.setGlobalThemeUsingPrimaryColor(THEME_color_main, withSecondaryColor: THEME_color_main, andContentStyle: .light)
 
         
         return true
