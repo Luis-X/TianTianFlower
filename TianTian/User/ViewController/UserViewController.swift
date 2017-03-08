@@ -94,7 +94,7 @@ class UserViewController: BaseViewController, UITableViewDataSource, UITableView
         }
         
         let showBarSubTitleLabel = QuicklyUI.labelAddView(addView: showBarView, textColor: THEME_color_text_black, font: .systemFont(ofSize: 12))
-        showBarSubTitleLabel.text = "连续签到99天"
+        showBarSubTitleLabel.text = "连续登录99天"
         showBarSubTitleLabel.textAlignment = .right
         showBarSubTitleLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
@@ -103,7 +103,7 @@ class UserViewController: BaseViewController, UITableViewDataSource, UITableView
         }
         
         let showBarTitleLabel = QuicklyUI.labelAddView(addView: showBarView, textColor: THEME_color_text_black, font: .systemFont(ofSize: 12))
-        showBarTitleLabel.text = "阅读书籍12本"
+        showBarTitleLabel.text = "累计获取12支"
         showBarTitleLabel.textAlignment = .center
         showBarTitleLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
@@ -117,7 +117,8 @@ class UserViewController: BaseViewController, UITableViewDataSource, UITableView
         //往回走注定失败,停下来注定迷茫,往前走坚定不移注定成功
     
         let mainTableView = QuicklyUI.tableviewAddView(addView: self.view, delegate: self, dataSource: self, style: .plain, separatorStyle: .singleLine)
-        mainTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        mainTableView.register(UserTableViewCell.self, forCellReuseIdentifier: "cell")
+        mainTableView.separatorStyle = .none
         mainTableView.snp.makeConstraints { (make) in
             make.top.equalTo(mainBackgroundImageView.snp.bottom)
             make.left.right.bottom.equalTo(self.view)
@@ -140,6 +141,12 @@ class UserViewController: BaseViewController, UITableViewDataSource, UITableView
     }
     
     //MARK: -UITableViewDelegate
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 100
+        
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }

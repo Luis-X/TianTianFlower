@@ -12,7 +12,7 @@ class UserTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        self.selectionStyle = .none
         self.createSubViews()
         
     }
@@ -34,11 +34,12 @@ class UserTableViewCell: UITableViewCell {
 
     func createSubViews() {
         
-        let cellBackgroundView = QuicklyUI.viewAddView(addView: self.contentView, backgroundColor: UIColor.orange)
+        let cellBackgroundView = QuicklyUI.viewAddView(addView: self.contentView, backgroundColor: UIColor.randomFlat)
         cellBackgroundView.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize(width: 300, height: 80))
-            make.left.equalTo(self.contentView)
-            make.top.bottom.equalTo(self.contentView)
+            make.top.equalToSuperview().offset(10)
+            make.bottom.equalToSuperview().offset(-10)
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().offset(-15)
         }
         
         

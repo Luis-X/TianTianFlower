@@ -14,7 +14,9 @@ PODS:
     - ChameleonFramework/Default
   - DateToolsSwift (2.0.0)
   - DeviceKit (1.0.1)
+  - FDFullscreenPopGesture (1.1)
   - Hero (0.1.7)
+  - NullSafe (1.2.2)
   - PINCache (3.0.1-beta)
   - PINRemoteImage/Core (3.0.0-beta.3):
     - PINCache (>= 3.0.0-beta)
@@ -32,7 +34,9 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - DateToolsSwift (~> 2.0.0)
   - DeviceKit (~> 1.0)
+  - FDFullscreenPopGesture (~> 1.1)
   - Hero (~> 0.1.7)
+  - NullSafe (~> 1.2.2)
   - Realm (~> 2.4.2)
   - SnapKit
   - SwiftyJSON (~> 3.1.4)
@@ -52,13 +56,15 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DateToolsSwift: 27336736d877c8734159da1f37afbda2aa704649
   DeviceKit: 461e525867e48e725f41699c1cab3100df1258ff
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Hero: 423c0c60ae79144ed2e26f5f7dd44e7cb101ee94
+  NullSafe: cbf1f77a24558e49bc76e2673f31250d3087c792
   PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
   PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: d3e0059c239a6e564a97932084fd798f93330f85
+PODFILE CHECKSUM: 9a33dfee7d59516fca11799d3774f349933ef1d0
 
 COCOAPODS: 1.2.0
