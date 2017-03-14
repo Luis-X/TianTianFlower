@@ -30,6 +30,8 @@
 		D191F17E1E64166800BC465F /* AppHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F17B1E64166800BC465F /* AppHeader.swift */; };
 		D191F17F1E64166800BC465F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F17C1E64166800BC465F /* Constant.swift */; };
 		D191F1801E64166800BC465F /* QuicklyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191F17D1E64166800BC465F /* QuicklyUI.swift */; };
+		D1A616F81E716A70008EC1E1 /* OnlineManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A616F71E716A70008EC1E1 /* OnlineManagerModel.swift */; };
+		D1A616FA1E72A9D1008EC1E1 /* UserTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A616F91E72A9D1008EC1E1 /* UserTableViewHeaderView.swift */; };
 		D1E1C9B51E650FD000AD5064 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1C9B41E650FD000AD5064 /* UserViewController.swift */; };
 		D1E1C9D81E652B2200AD5064 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1C9D71E652B2200AD5064 /* NetworkManager.swift */; };
 		D1E1C9DE1E65784600AD5064 /* HostAddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1C9DD1E65784600AD5064 /* HostAddressManager.swift */; };
@@ -84,6 +86,8 @@
 		D191F17B1E64166800BC465F /* AppHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHeader.swift; sourceTree = "<group>"; };
 		D191F17C1E64166800BC465F /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D191F17D1E64166800BC465F /* QuicklyUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklyUI.swift; sourceTree = "<group>"; };
+		D1A616F71E716A70008EC1E1 /* OnlineManagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineManagerModel.swift; sourceTree = "<group>"; };
+		D1A616F91E72A9D1008EC1E1 /* UserTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewHeaderView.swift; sourceTree = "<group>"; };
 		D1E1C9B41E650FD000AD5064 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D1E1C9D71E652B2200AD5064 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D1E1C9DD1E65784600AD5064 /* HostAddressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostAddressManager.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 		D191F13E1E6412AF00BC465F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D1A616F71E716A70008EC1E1 /* OnlineManagerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				D108B2751E696B3A00A806E7 /* UserTableViewCell.swift */,
+				D1A616F91E72A9D1008EC1E1 /* UserTableViewHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -702,10 +708,12 @@
 				D1E1C9B51E650FD000AD5064 /* UserViewController.swift in Sources */,
 				D191F17E1E64166800BC465F /* AppHeader.swift in Sources */,
 				D1E1C9D81E652B2200AD5064 /* NetworkManager.swift in Sources */,
+				D1A616F81E716A70008EC1E1 /* OnlineManagerModel.swift in Sources */,
 				D108B2761E696B3A00A806E7 /* UserTableViewCell.swift in Sources */,
 				D1E1C9DE1E65784600AD5064 /* HostAddressManager.swift in Sources */,
 				D191F1771E6414F700BC465F /* RootTabBarController.swift in Sources */,
 				D191F1681E6412AF00BC465F /* LoginViewController.swift in Sources */,
+				D1A616FA1E72A9D1008EC1E1 /* UserTableViewHeaderView.swift in Sources */,
 				D191F1671E6412AF00BC465F /* HomeViewController.swift in Sources */,
 				184EC00F1DE2C39500B30B1D /* ViewController.swift in Sources */,
 				D191F17A1E64155800BC465F /* BaseViewController.swift in Sources */,
@@ -890,8 +898,6 @@
 					"-framework",
 					"\"Hero\"",
 					"-framework",
-					"\"NullSafe\"",
-					"-framework",
 					"\"PINCache\"",
 					"-framework",
 					"\"PINRemoteImage\"",
@@ -939,8 +945,6 @@
 					"\"FDFullscreenPopGesture\"",
 					"-framework",
 					"\"Hero\"",
-					"-framework",
-					"\"NullSafe\"",
 					"-framework",
 					"\"PINCache\"",
 					"-framework",

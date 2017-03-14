@@ -16,7 +16,6 @@ PODS:
   - DeviceKit (1.0.1)
   - FDFullscreenPopGesture (1.1)
   - Hero (0.1.7)
-  - NullSafe (1.2.2)
   - PINCache (3.0.1-beta)
   - PINRemoteImage/Core (3.0.0-beta.3):
     - PINCache (>= 3.0.0-beta)
@@ -26,6 +25,7 @@ PODS:
     - Realm/Headers (= 2.4.2)
   - Realm/Headers (2.4.2)
   - SnapKit (3.0.2)
+  - Spring (1.0.3)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -36,19 +36,25 @@ DEPENDENCIES:
   - DeviceKit (~> 1.0)
   - FDFullscreenPopGesture (~> 1.1)
   - Hero (~> 0.1.7)
-  - NullSafe (~> 1.2.2)
   - Realm (~> 2.4.2)
   - SnapKit
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftyJSON (~> 3.1.4)
 
 EXTERNAL SOURCES:
   ChameleonFramework:
     :git: https://github.com/ViccAlexander/Chameleon.git
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
   ChameleonFramework:
     :commit: dcf98f9bf3a632a7f40679b7da46f09681e48526
     :git: https://github.com/ViccAlexander/Chameleon.git
+  Spring:
+    :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -58,13 +64,13 @@ SPEC CHECKSUMS:
   DeviceKit: 461e525867e48e725f41699c1cab3100df1258ff
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Hero: 423c0c60ae79144ed2e26f5f7dd44e7cb101ee94
-  NullSafe: cbf1f77a24558e49bc76e2673f31250d3087c792
   PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
   PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 9a33dfee7d59516fca11799d3774f349933ef1d0
+PODFILE CHECKSUM: 318c8988473fd19e9db80d2c5e9b9afef8ad6b54
 
 COCOAPODS: 1.2.0

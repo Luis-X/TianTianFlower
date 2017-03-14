@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double NullSafeVersionNumber;
-FOUNDATION_EXPORT const unsigned char NullSafeVersionString[];
+FOUNDATION_EXPORT double SpringVersionNumber;
+FOUNDATION_EXPORT const unsigned char SpringVersionString[];
 

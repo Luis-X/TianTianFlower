@@ -154,8 +154,11 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
     
     func networkGetHomeData() {
 
-        NetworkManager.GET(url: HostAddressManager().requestAPI(api: "login"), parameters: ["username": 456, "password": 123], success: { (success) in
-            print("成功:", JSON(success))
+        NetworkManager.GET(url: "https://shopappserver.showjoy.com/app/getCmsConfig", parameters: ["appType": 2, "preTest": false], success: { (success) in
+            //print("成功:", JSON(success))
+            let dataJson = JSON(success)["data"]
+            let onlineManagerModel = OnlineManagerModel(fromJson: dataJson)
+            print(onlineManagerModel.homeBar)
         }) { (failure) in
             print("失败", failure)
             

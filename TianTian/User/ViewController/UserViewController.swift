@@ -10,9 +10,6 @@ import UIKit
 
 class UserViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var mainBackgroundImageView: UIImageView!
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -22,13 +19,12 @@ class UserViewController: BaseViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.white
         
     }
 
     override func baseDidLoadAllViews() {
-        
-        createBackgroundImageView()
-        createUserInfoShowBar()
+    
         createMainTableView()
         
     }
@@ -49,78 +45,16 @@ class UserViewController: BaseViewController, UITableViewDataSource, UITableView
     }
     */
     
-    func createBackgroundImageView() {
-        
-        mainBackgroundImageView = QuicklyUI.imageViewAddView(addView: self.view, clipsToBounds: true, contentMode: .scaleAspectFill)
-        mainBackgroundImageView.image = UIImage(named: "picture")
-        mainBackgroundImageView.snp.makeConstraints { (make) in
-            make.top.left.right.equalTo(self.view)
-            make.height.equalTo(300)
-        }
-        
-    }
-
-    
-    /// 用户展示栏
-    func createUserInfoShowBar() {
-        
-        let showBarView = QuicklyUI.viewAddView(addView: mainBackgroundImageView, backgroundColor: THEME_color_view_white)
-        showBarView.layer.masksToBounds = true
-        showBarView.layer.cornerRadius = 5
-        showBarView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(30)
-            make.left.equalToSuperview().offset(15)
-            make.right.equalToSuperview().offset(-15)
-            make.height.equalTo(50)
-        }
-        
-        let headImage_size = 30
-        let showBarHeadImageView = QuicklyUI.imageViewAddView(addView: showBarView, clipsToBounds: true, contentMode: .scaleAspectFill)
-        showBarHeadImageView.image = UIImage(named: "picture")
-        showBarHeadImageView.layer.masksToBounds = true
-        showBarHeadImageView.layer.cornerRadius = CGFloat(headImage_size / 2)
-        showBarHeadImageView.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.size.equalTo(headImage_size)
-            make.left.equalTo(showBarView).offset(headImage_size)
-        }
-        
-        
-        let showBarLine = QuicklyUI.viewAddView(addView: showBarView, backgroundColor: THEME_color_line_normal)
-        showBarLine.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.right.equalTo(showBarView).offset(-130)
-            make.size.equalTo(CGSize(width: 1, height: 20))
-        }
-        
-        let showBarSubTitleLabel = QuicklyUI.labelAddView(addView: showBarView, textColor: THEME_color_text_black, font: .systemFont(ofSize: 12))
-        showBarSubTitleLabel.text = "连续登录99天"
-        showBarSubTitleLabel.textAlignment = .right
-        showBarSubTitleLabel.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.left.equalTo(showBarLine.snp.right).offset(30)
-            make.right.lessThanOrEqualTo(showBarView).offset(-15)
-        }
-        
-        let showBarTitleLabel = QuicklyUI.labelAddView(addView: showBarView, textColor: THEME_color_text_black, font: .systemFont(ofSize: 12))
-        showBarTitleLabel.text = "累计获取12支"
-        showBarTitleLabel.textAlignment = .center
-        showBarTitleLabel.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.right.equalTo(showBarLine.snp.left).offset(-30)
-            make.left.greaterThanOrEqualTo(showBarHeadImageView.snp.right).offset(15)
-        }
-        
-    }
     
     func createMainTableView() {
         //往回走注定失败,停下来注定迷茫,往前走坚定不移注定成功
-    
-        let mainTableView = QuicklyUI.tableviewAddView(addView: self.view, delegate: self, dataSource: self, style: .plain, separatorStyle: .singleLine)
+        
+        let mainTableView = QuicklyUI.tableviewAddView(addView: self.view, delegate: self, dataSource: self, style: .grouped, separatorStyle: .singleLine)
         mainTableView.register(UserTableViewCell.self, forCellReuseIdentifier: "cell")
+        mainTableView.register(UserTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: "header")
         mainTableView.separatorStyle = .none
         mainTableView.snp.makeConstraints { (make) in
-            make.top.equalTo(mainBackgroundImageView.snp.bottom)
+            make.top.equalTo(self.view).offset(-20)
             make.left.right.bottom.equalTo(self.view)
         }
         
@@ -140,14 +74,28 @@ class UserViewController: BaseViewController, UITableViewDataSource, UITableView
         
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header")
+        return headerView
+        
+    }
+    
     //MARK: -UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return 100
-        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 300
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 5
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
 }
