@@ -59,12 +59,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ScrollableGraphView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyBeaver.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -92,12 +102,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>32417BF11549A8F0995F52E4FCFB02D2</key>
+		<key>2BB0F044FB14877C9B1630365E899587</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5F18B72450FE4381CD5F9813C21D44AE</key>
+		<key>31F89C259352B4BFEBBE4B183DC7A7A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4BDE9E3D7470A38232EF3F4B1C6C9C3A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C4C0ABA2D77C3C9A434208E1C34DE19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67A437E4EEFCA81E7A6AE3E6F59AE71C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,17 +132,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7906338289F672AF1F4A959FA1779557</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7F7EE1026C89B34DFB357B472255C09D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8AB8D4148A84DF6E871F0EDAF9B724FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,12 +157,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0E4F7D1DB475B7AB13844B1441A3DCD</key>
+		<key>E89CFD99B895BCC6E8EDC2F95A03500C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E89CFD99B895BCC6E8EDC2F95A03500C</key>
+		<key>EE64CCAF7D1BB880A1096D7CA811B141</key>
 		<dict>
 			<key>primary</key>
 			<true/>

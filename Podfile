@@ -14,6 +14,8 @@ pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3
 pod 'Hero', '~> 0.1.7'			# 过度动画
 pod 'DeviceKit', '~> 1.0'		# 设备信息
 pod 'Realm', '~> 2.4.2'         	# 数据库
+pod 'ScrollableGraphView', '~> 3.1.0'	# 滚动图表
+pod 'SwiftyBeaver', '~> 1.1.1'		# Log框架
 end
 
 

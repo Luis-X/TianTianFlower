@@ -24,8 +24,10 @@ PODS:
   - Realm (2.4.2):
     - Realm/Headers (= 2.4.2)
   - Realm/Headers (2.4.2)
+  - ScrollableGraphView (3.1.0)
   - SnapKit (3.0.2)
   - Spring (1.0.3)
+  - SwiftyBeaver (1.1.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -37,8 +39,10 @@ DEPENDENCIES:
   - FDFullscreenPopGesture (~> 1.1)
   - Hero (~> 0.1.7)
   - Realm (~> 2.4.2)
+  - ScrollableGraphView (~> 3.1.0)
   - SnapKit
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - SwiftyBeaver (~> 1.1.1)
   - SwiftyJSON (~> 3.1.4)
 
 EXTERNAL SOURCES:
@@ -67,10 +71,12 @@ SPEC CHECKSUMS:
   PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
   PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
+  ScrollableGraphView: e2c8bedc7bbb643e8ac57b9456070d68355c4e4c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SwiftyBeaver: 2b68694df862381235e32bcfc4ec991e26bf131d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 318c8988473fd19e9db80d2c5e9b9afef8ad6b54
+PODFILE CHECKSUM: 1571bd43c1492fda4582618e65dda89dad048cdb
 
 COCOAPODS: 1.2.0
